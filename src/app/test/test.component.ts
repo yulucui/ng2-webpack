@@ -7,7 +7,7 @@ const echarts = require('echarts');
     selector: 'test',
     template: `
     <div>
-      <h1 myHighlight>Test</h1>
+      <h1 myHighlight>Testt</h1>
       <div id="main" style="width: 600px;height:400px;"></div>
       <input type="text" [(ngModel)]="queryString"/><input type="button" (click)="search()" value="搜索"/>
       <pre>{{data | json}}</pre>
@@ -28,7 +28,7 @@ export class TestComponent implements AfterViewInit{
 
     ngAfterViewInit(): void {
         console.log(this.data);
-        $('h1').html('$Test');
+        $('h1').html('$Testt');
         var myChart = echarts.init(document.getElementById('main'));
 
         // 指定图表的配置项和数据

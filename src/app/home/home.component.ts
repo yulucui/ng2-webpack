@@ -28,9 +28,7 @@ export class HomeComponent implements OnInit {
   constructor(
     public appState: AppState,
     public title: Title
-  ) {
-    console.log('--------------loadhome');
-  }
+  ) {}
 
   public ngOnInit() {
     console.log('hello `Home` component');

@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 
 import { routes } from './detail.routes';
 import { DetailComponent } from './detail.component';
-import {HighlightDirective} from "../directives/highlight.directive";
 
 console.log('`Detail` bundle loaded asynchronously');
 
@@ -13,7 +12,6 @@ console.log('`Detail` bundle loaded asynchronously');
   declarations: [
     // Components / Directives/ Pipes
     DetailComponent,
-    HighlightDirective
   ],
   imports: [
     CommonModule,

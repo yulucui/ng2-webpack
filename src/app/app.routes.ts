@@ -9,9 +9,9 @@ import {TestComponent} from "./test";
 export const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
   { path: 'home',  component: HomeComponent },
-  { path: 'about', component: AboutComponent,data: {yourData: 'aaa'} },
+  { path: 'about', component: AboutComponent },
   { path: 'test', component: TestComponent },
-  { path: 'detail', loadChildren: './+detail#DetailModule', data: {preload: false}},
+  { path: 'detail', loadChildren: './+detail#DetailModule'},
   { path: 'barrel', loadChildren: './+barrel#BarrelModule'},
   { path: '**',    component: NoContentComponent },
 ];

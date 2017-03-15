@@ -2,7 +2,6 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
-import {HighlightDirective} from "../directives/highlight.directive";
 /*
  * We're loading this component asynchronously
  * We are using some magic with es6-promise-loader that will wrap the module with a Promise
@@ -14,8 +13,7 @@ console.log('`Detail` component loaded asynchronously');
 @Component({
   selector: 'detail',
   template: `
-    <h1 myHighlight>Hello from Detail</h1>
-    <h2 myHighlight>Hello from Detail</h2>
+    <h1>Hello from Detail</h1>
     <span>
       <a [routerLink]=" ['./child-detail'] ">
         Child Detail
@@ -23,7 +21,6 @@ console.log('`Detail` component loaded asynchronously');
     </span>
     <router-outlet></router-outlet>
   `,
-  directives: [ HighlightDirective ]
 })
 export class DetailComponent implements OnInit {
 

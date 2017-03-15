@@ -56,7 +56,7 @@ export class AboutComponent implements OnInit {
           this.localState = json;
         });
 
-    },3000);
+    });
   }
 
 }
