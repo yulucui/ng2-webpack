@@ -34,7 +34,12 @@ import '../styles/styles.scss';
 import '../styles/headings.css';
 import {TestService} from "./test/test.service";
 // import {HighlightDirective} from "./directives/highlight.directive";
-
+import { ModalModule } from 'ng2-bootstrap';
+import { DndModule } from 'ng2-dnd';
+import { SelectModule } from 'ng2-select';
+import { CustomDataDndComponent } from './test/custom-data-dnd.component';
+import { ModalStaticComponent } from './test/modal-static-.component';
+import { SingleDemoComponent } from './test/single-demo.component';
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
@@ -59,13 +64,19 @@ type StoreType = {
     HomeComponent,
     NoContentComponent,
     XLargeDirective,
+    CustomDataDndComponent,
+    ModalStaticComponent,
+    SingleDemoComponent
     // HighlightDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    RouterModule.forRoot(ROUTES, { useHash: true }),
+    DndModule.forRoot(),
+    ModalModule.forRoot(),
+    SelectModule
     // RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection

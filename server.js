@@ -8,7 +8,7 @@ const express = require('express');
 // const config = require('./webpack.config.js');
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
-const port = isDeveloping ? 3000 : process.env.PORT;
+const port = isDeveloping ? 8088 : process.env.PORT;
 const app = express();
 const server = require('./service/search/Searcher');
 const model = require('./service/search/gen-nodejs/ESmodel_types');
@@ -36,6 +36,7 @@ const model = require('./service/search/gen-nodejs/ESmodel_types');
 //   });
 // } else {
 app.get('/data',function response(req,res) {
+  // res.send({data:111});
   var qm = new model.TQueryModel();
   qm.queryString = req.param('queryString');
   // qm.queryString = '*:*';

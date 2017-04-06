@@ -7,7 +7,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { AppState } from './app.service';
-
+import {cssfile} from './mycss';
 /*
  * App Component
  * Top Level Component
@@ -15,9 +15,12 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: [
-    './app.component.css'
-  ],
+  // styles: [`
+  //   a.active {
+  //     background-color: ${cssfile};
+  //   }
+  // `],
+  styleUrls: ["./app.component.css"],
   template: `
     <nav>
       <a [routerLink]=" ['./'] "
@@ -50,6 +53,7 @@ import { AppState } from './app.service';
     </main>
 
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+    <input type="button" value="换肤" (click)="change()"/>
 
     <footer>
       <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
@@ -72,6 +76,9 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
+  }
+  color: string = 'lightcoral';
+  change(){
   }
 
 }
