@@ -22,7 +22,7 @@ const echarts = require('echarts');
 export class TestComponent implements AfterViewInit{
     constructor(private testService: TestService){
         console.log($('#commoncss'));
-        $('#commoncss').attr('href','');
+        // $('#commoncss').attr('href','');
     }
 
     private data:any = {};
@@ -43,7 +43,8 @@ export class TestComponent implements AfterViewInit{
     }
 
     private changeCss = () => {
-        $('#commoncss').attr('href','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+        $('#commoncss').attr('href','');
+        // $('#commoncss').attr('href','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
     }
 
     private search = () => {
